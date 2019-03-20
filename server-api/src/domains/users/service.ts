@@ -4,9 +4,9 @@ import { User } from './model';
 @Injectable()
 export class UsersService {
   findOneById():User {
-    return ({
-      id: '1',
+    return {
+      id: 1,
       name: 'valentin'
-    });
+    };
   }
 }

@@ -3,10 +3,12 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+"""the house model"""
 type House {
   id: String!
   piecesNumber: Float!
   area: Float!
+  owner: User
 }
 
 type Query {

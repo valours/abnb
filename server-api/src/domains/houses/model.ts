@@ -1,6 +1,7 @@
-import { Field, ID, ObjectType } from 'type-graphql';
+import { Field, ObjectType } from 'type-graphql';
+import { User } from '../users/model';
 
-@ObjectType()
+@ObjectType({ description: 'the house model'})
 export class House {
   @Field()
   id: string;
@@ -10,4 +11,7 @@ export class House {
   
   @Field()
   area: number;
+
+  @Field(type => User, {nullable: true})
+  owner?: User;
 }

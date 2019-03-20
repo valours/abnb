@@ -10,7 +10,7 @@ import { HousesModule } from 'src/domains/houses/module';
     GraphQLModule.forRoot({
       installSubscriptionHandlers: true,
       autoSchemaFile: 'schema.gql',
-      debug: false, // turn off the debug mode
+      //debug: false, // turn off the debug mode
       // playground: false, // disable the playground
     }),
   ],

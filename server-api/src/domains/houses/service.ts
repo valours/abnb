@@ -3,7 +3,7 @@ import { House } from './model';
 
 @Injectable()
 export class HousesService {
-  findOneById():House {
+  findOneById() {
     return ({
       id: '1',
       area: 40,
