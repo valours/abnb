@@ -8,7 +8,6 @@ export class HousesService {
       id: '1',
       area: 40,
       piecesNumber: 2,
-      user: null,
     });
   }
 }

@@ -3,8 +3,15 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type House {
+  id: String!
+  piecesNumber: Float!
+  area: Float!
+}
+
 type Query {
   user: User!
+  house: House!
 }
 
 type User {
