@@ -1,9 +1,4 @@
-
-
 ## Feature:
- - Creation d'un compte utilisateur
- - Creation d'un compte loueur
-  - Création d'un bien à louer.
 
 ## Models:
   - utilisateurs (loueur, utilisateur)
@@ -14,7 +9,7 @@
 start with nest 
 simple api pousser par express et exposant avec graphql les models du domaine.
 
-*** notes: ***
+** notes: **
 - Controllers are responsible for handling incoming requests and returning responses to the client.
 
 stacks: express, express-graphql, lodash
