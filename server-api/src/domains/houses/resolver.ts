@@ -1,4 +1,4 @@
-import { Query, Resolver, Root } from '@nestjs/graphql';
+import { Query, Resolver, Parent, ResolveProperty } from '@nestjs/graphql';
 import { FieldResolver } from 'type-graphql';
 import { HousesService } from './service';
 import { UsersService } from '../users/service';
@@ -17,8 +17,8 @@ export class HousesResolver {
     return this.housesService.findOneById();
   }
 
-  @FieldResolver()
-  owner(@Root() house: House) {
+  @ResolveProperty('owner')
+  owner(@Parent() house: House) {
     return this.usersService.findOneById();
   }
 }

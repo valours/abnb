@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { House } from './model';
 
 @Injectable()
 export class HousesService {
