@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { AppService } from './services/app.service';
 
 // Basic controller sample with a single route.
 @Controller()
