@@ -5,7 +5,7 @@ import { UsersService } from '../users/service';
 import { User } from '../users/model';
 import { House } from './model';
 
-@Resolver(of => House)
+@Resolver(() => House)
 export class HousesResolver {
   constructor(
     private readonly housesService: HousesService,
