@@ -14,6 +14,9 @@
 start with nest 
 simple api pousser par express et exposant avec graphql les models du domaine.
 
+*** notes: ***
+- Controllers are responsible for handling incoming requests and returning responses to the client.
+
 stacks: express, express-graphql, lodash
 
 ## web-client

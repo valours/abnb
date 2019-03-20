@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './modules/app.module';
+import { ApplicationModule } from './modules/graphql.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule); // Nest application instance
+  const app = await NestFactory.create(ApplicationModule); // Nest application instance
   await app.listen(3000);
 }
 bootstrap();
