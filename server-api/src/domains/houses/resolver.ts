@@ -10,7 +10,7 @@ export class HousesResolver {
     private readonly usersService: UsersService,
   ) {}
 
-  @Query(returns => House)
+  @Query(() => House)
   house() {
     return this.housesService.findOneById();
   }
