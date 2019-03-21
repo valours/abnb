@@ -1,19 +1,25 @@
-## Feature:
+## Ideas
+
+## scripts
+```
+// an order to govern them all
+yarn start
+```
+
+## Features
+ - [ ] add features
 
 ## Models:
-  - utilisateurs (loueur, utilisateur)
-  - Bien ()
-  - Location (rentals) (période, valider par l'utilisateur)
+  - users (owner, lodger)
+  - houses
+  - rentals
 
 ## server-api
-start with nest 
-simple api pousser par express et exposant avec graphql les models du domaine.
-
-** notes: **
-- Controllers are responsible for handling incoming requests and returning responses to the client.
+ - [ ] add description
 
 stacks: express, express-graphql, lodash
 
 ## web-client
+  - [ ] add description
 
 stacks: react, lodash
