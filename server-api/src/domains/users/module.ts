@@ -6,6 +6,6 @@ import { HousesModule } from '../houses/module';
 @Module({
   imports: [ forwardRef(() => HousesModule) ],
   providers: [UsersResolver, UsersService],
-  exports: [UsersService]
+  exports: [ UsersService ],
 })
 export class UsersModule {}

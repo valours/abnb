@@ -1,8 +1,6 @@
 import { Query, Resolver, Parent, ResolveProperty } from '@nestjs/graphql';
-import { FieldResolver } from 'type-graphql';
 import { HousesService } from './service';
 import { UsersService } from '../users/service';
-import { User } from '../users/model';
 import { House } from './model';
 
 @Resolver(() => House)
