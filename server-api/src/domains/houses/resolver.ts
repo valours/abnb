@@ -15,6 +15,11 @@ export class HousesResolver {
     return this.housesService.findOneById();
   }
 
+  @Query(returns => [House])
+  async houses(): Promise<House[]> {
+    return await this.housesService.findAll();
+  }
+
   @ResolveProperty('owner')
   owner(@Parent() house: House) {
     return this.usersService.findOneById();

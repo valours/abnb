@@ -5,10 +5,10 @@ import { User } from '../users/model';
 export class House {
   @Field()
   id: string;
-  
+
   @Field()
   piecesNumber: number;
-  
+
   @Field()
   area: number;
 
