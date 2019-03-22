@@ -14,6 +14,7 @@ type House {
 type Query {
   user: User!
   house: House!
+  houses: [House!]!
 }
 
 type User {
