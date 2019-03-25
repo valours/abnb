@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Query } from "react-apollo";
+import styled from 'styled-components';
 import gql from 'graphql-tag';
 
 import IHouse from '../domains/house/interface';
@@ -10,6 +12,7 @@ query {
   houses {
     id
     piecesNumber
+    area
     owner {
       id
       name
@@ -17,16 +20,34 @@ query {
   }
 }
 `
+const H2 = styled.h2`
+  text-align: center;
+  color: palevioletred;
+`
+
+const HousesStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 const Houses = () => {
   return (
     <div>
-      <h1>Houses</h1>
+      <H2>Nos maisons</H2>
       <Query query={QUERY}>
         {({ loading, data, error }) => {
           if(loading) return (<div>wait</div>)
           if(error) return <div>damn{console.log(error)}</div>
-          if(data) return (<div>{data.houses.map((h: IHouse)  => <HouseItem key={h.id} house={h}/>)}</div>)
+          if(data) return (
+            <HousesStyled>
+              { data.houses.map((h: IHouse) => (
+                <Link to={`/houses/${h.id}`}>
+                  <HouseItem key={h.id} house={h}/>
+                </Link>
+              ))}
+            </HousesStyled>
+          )
         }}
       </Query>
     </div>
