@@ -42,8 +42,8 @@ const Houses = () => {
           if(data) return (
             <HousesStyled>
               { data.houses.map((h: IHouse) => (
-                <Link to={`/houses/${h.id}`}>
-                  <HouseItem key={h.id} house={h}/>
+                <Link key={h.id} to={`/houses/${h.id}`}>
+                  <HouseItem house={h}/>
                 </Link>
               ))}
             </HousesStyled>
